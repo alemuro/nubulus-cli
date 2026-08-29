@@ -20,12 +20,39 @@ CLI en Go per a interactuar de manera àgil amb les APIs de **DNS** i **Túnels 
 
 ---
 
-## Instal·lació i Compilació
+## Instal·lació
 
-Requereix Go 1.22+:
+Podeu instal·lar la CLI directament **sense necessitat de clonar el repositori**:
+
+### Opció 1: Amb `go install` (Recomanat per a usuaris de Go)
+
+Com que el repositori és privat a GitHub, configureu `GOPRIVATE` per al domini:
 
 ```bash
-# Compilar el binari local
+GOPRIVATE=github.com/alemuro/* go install github.com/alemuro/nubulus-cli@latest
+```
+
+> **Nota:** El binari `nubulus` quedarà instal·lat al vostre `$GOPATH/bin` (habitualment `~/go/bin`). Assegureu-vos de tenir `export PATH="$HOME/go/bin:$PATH"` al vostre `~/.bashrc` o `~/.zshrc`.
+
+---
+
+### Opció 2: Instal·lació directa en un sol comandament (One-liner amb `gh` CLI)
+
+Si teniu la CLI de GitHub (`gh`) autenticada, podeu descarregar, compilar i instal·lar el binari directament a `~/.local/bin` en una sola comanda temporal:
+
+```bash
+gh repo clone alemuro/nubulus-cli /tmp/nubulus-cli -- --depth 1 && (cd /tmp/nubulus-cli && make install) && rm -rf /tmp/nubulus-cli
+```
+
+---
+
+### Opció 3: Compilació des del codi font (Clonant el repositori)
+
+```bash
+git clone https://github.com/alemuro/nubulus-cli.git
+cd nubulus-cli
+
+# Compilar el binari local (./nubulus)
 make build
 
 # O instal·lar-lo a ~/.local/bin/nubulus

@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"nubulusttun/pkg/output"
+	"github.com/alemuro/nubulus-cli/pkg/output"
 )
 
 //go:embed skills/SKILL.md

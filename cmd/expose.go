@@ -14,8 +14,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"nubulusttun/pkg/client"
-	"nubulusttun/pkg/output"
+	"github.com/alemuro/nubulus-cli/pkg/client"
+	"github.com/alemuro/nubulus-cli/pkg/output"
 )
 
 var (

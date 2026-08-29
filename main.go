@@ -1,7 +1,7 @@
 package main
 
 import (
-	"nubulusttun/cmd"
+	"github.com/alemuro/nubulus-cli/cmd"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module nubulusttun
+module github.com/alemuro/nubulus-cli
 
 go 1.25.0
 
