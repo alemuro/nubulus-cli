@@ -1,0 +1,23 @@
+# Binaries
+nubulus
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Coverage tool output
+*.out
+
+# Go workspace
+go.work
+
+# OS & Editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
